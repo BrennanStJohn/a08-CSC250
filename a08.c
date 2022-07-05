@@ -20,18 +20,35 @@ int locInList(node *head, int x);
 int main(){
 
     node *head = NULL;
+    int num = 0;
+    int lookup = 0;
 
-    head = insertBack(head, 5); 
-    head = insertFront(head, 4); 
-    head = insertFront(head, 3); 
-    head = insertBack(head, 6); 
-    head = insertBack(head, 7); 
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    head = insertBack(head, num);
+    printf("Enter another number: ");
+    scanf("%d", &num);
+    head = insertFront(head, num);
+    printf("Enter another number: ");
+    scanf("%d", &num);
+    head = insertFront(head, num);
+    printf("Enter another number: ");
+    scanf("%d", &num); 
+    head = insertBack(head, num);
+    printf("Enter final number: ");
+    scanf("%d", &num);
+    head = insertBack(head, num); 
     print(head);
 
     printf("Max: %d\n", max(head));
     printf("Min: %d\n", min(head));
-    printf("Location in List for 5: %d\n", locInList(head, 5)); 
-    printf("Location in List for 9: %d\n", locInList(head, 9)); 
+    printf("Enter a number to lookup location of: ");
+    scanf("%d", &lookup);
+    printf("Location in List for %d: %d\n", lookup, locInList(head, lookup));
+    printf("Enter another number to lookup location of: ");
+    scanf("%d", &lookup);
+    printf("Location in List for %d: %d\n", lookup, locInList(head, lookup)); 
 
 }
 
