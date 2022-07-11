@@ -142,6 +142,9 @@ int locInList(node *head, int x){
     tmp = head;
     int i = 0;
 
+    if (head->data == x){
+            return i;
+    }
     while (head->data != x) {
 
         head = head->next;
@@ -154,7 +157,4 @@ int locInList(node *head, int x){
             return -1;
         }
     }
-
-
-
 }
